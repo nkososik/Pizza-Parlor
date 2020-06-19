@@ -9,34 +9,31 @@ function Pizza(size) {
   this.toppings = [];
   this.size = size;
 }
-//push each topping selected from checkbox into array
-Pizza.prototype.toppingsAdded = function(element) {
-  this.toppings.push(element);
-}
 
-Pizza.prototype.calculatePizzaTotal = function() {
-  let pizzaPrice = 0.00;
-  //set size variable in UI to radiobox values, should transfer
+Pizza.prototype.calculateBasePizzaPrice = function() {
+  this.pizzaPrice = 0.00;
   switch(this.size) {
     case("extra"):
-      return pizzaPrice += 18.00;
+      this.pizzaPrice += 18.00;
       break;
     case("large"):
-      return pizzaPrice += 16.00;
+      this.pizzaPrice += 16.00;
       break;
     case("medium"):
-      return pizzaPrice += 13.00;
-      break ;
-    case("small"):
-      return pizzaPrice += 10.00;
+      this.pizzaPrice += 13.00;
       break;
-  }
-//set price from size then add 0.50 for each topping added
-  this.toppings.forEach(function(element) {
-    pizzaPrice += 0.50;
-  })
-  return pizzaPrice; // completes pizzaPrice calculation
+    case("small"):
+      this.pizzaPrice += 10.00;
+      break;
+  };
 }
+
+
+//   this.toppings.forEach(function(element) {
+//     this.pizzaPrice += 0.50;
+//   })
+//   return this.pizzaPrice.toFixed(2); // completes pizzaPrice calculation
+// }
 
 // User Interface Logic
 $(document).ready(function() {
@@ -53,6 +50,8 @@ $(document).ready(function() {
     });
     console.log(newPizza.toppings);
     console.log(newPizza.size);
+    newPizza.calculateBasePizzaPrice();
+    console.log(newPizza.pizzaPrice);
   })
 
 
