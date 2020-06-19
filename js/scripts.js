@@ -9,25 +9,31 @@ function Pizza() {
   this.toppings = [];
   this.size = size;
 }
-
+//push each topping selected from checkbox into array
 Pizza.prototype.toppingsAdded = function(element) {
   this.toppings.push(element);
 }
 
 Pizza.prototype.calculateOrderTotal = function() {
-  let orderPrice = 0.00;
-  //set size variable in UI
+  let pizzaPrice = 0.00;
+  //set size variable in UI to radiobox values, should transfer
   switch(this.size) {
-    case("small"):
-      return orderPrice += 10.00;
+    case("large"):
+      return pizzaPrice += 16.00;
       break;
     case("medium"):
-      return orderPrice += 13.00;
+      return pizzaPrice += 13.00;
       break ;
-    case("large"):
-      return orderPrice += 16.00;
+    case("small"):
+      return pizzaPrice += 10.00;
       break;
   }
+//set price from size then add 0.50 for each topping added
+  this.toppings.forEach(function(element) {
+    pizzaPrice += 0.50;
+  })
+  return pizzaPrice;
 }
 
 // User Interface Logic
+
