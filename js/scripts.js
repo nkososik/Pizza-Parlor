@@ -14,7 +14,7 @@ Pizza.prototype.toppingsAdded = function(element) {
   this.toppings.push(element);
 }
 
-Pizza.prototype.calculateOrderTotal = function() {
+Pizza.prototype.calculatePizzaTotal = function() {
   let pizzaPrice = 0.00;
   //set size variable in UI to radiobox values, should transfer
   switch(this.size) {
@@ -40,3 +40,6 @@ Pizza.prototype.calculateOrderTotal = function() {
 
 // User Interface Logic
 
+$(document).ready(function() {
+  
+})
