@@ -1,0 +1,13 @@
+.jumbotron {
+  text-align: center;
+}
+
+#order-selection {
+  background-color: aquamarine;
+  padding: 25px;
+}
+
+#price-display {
+  background-color: burlywood;
+  padding: 25px;
+}
