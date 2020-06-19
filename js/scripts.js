@@ -1,8 +1,8 @@
 // Business Logic
-function Order() {
-  this.orders = [];
-  this.orderId = 0;
-}
+// function Order() {
+//   this.orders = [];
+//   this.orderId = 0;
+// }
 
 // Pizza Constructor and Prototypes
 function Pizza() {
@@ -41,5 +41,13 @@ Pizza.prototype.calculatePizzaTotal = function() {
 // User Interface Logic
 
 $(document).ready(function() {
+
+
+  $("button#place-order").click(function() {
+    $("#order-space").fadeIn();
+  })
   
-})
+  $("button#reset-order").click(function() {
+    location.reload();
+  })
+});

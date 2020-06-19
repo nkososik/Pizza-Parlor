@@ -4,11 +4,14 @@ body {
   background-size: cover;
   
 }
+
 .jumbotron {
   text-align: center;
 }
 
-
+#order-space, #price-display{
+  display: none;
+}
 
 #order-selection {
   background-color: aquamarine;
