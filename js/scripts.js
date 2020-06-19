@@ -5,7 +5,7 @@
 // }
 
 // Pizza Constructor and Prototypes
-function Pizza() {
+function Pizza(size) {
   this.toppings = [];
   this.size = size;
 }
@@ -41,12 +41,16 @@ Pizza.prototype.calculatePizzaTotal = function() {
 // User Interface Logic
 
 $(document).ready(function() {
-
-
   $("button#place-order").click(function() {
     $("#order-space").fadeIn();
+    });
+  $("form#new-pizza-order").submit(function(event) {
+    event.preventDefault();
+    let newPizza = new Pizza;
+    newPizza.size = $("input:radio[name=size]:checked").val();
+      console.log(newPizza.size);
   })
-  
+
   $("button#reset-order").click(function() {
     location.reload();
   })
