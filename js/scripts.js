@@ -24,7 +24,23 @@ Pizza.prototype.calculateBasePizzaPrice = function() {
   }
 }
 
+Pizza.prototype.fullOrder = function() {
+  return this.size + " pizza with " + this.toppings.join(", ")
+}
+
 // User Interface Logic
+function addToppings(newPizza) {
+  $("input:checkbox[name=pizza-topping]:checked").each(function() {
+    newPizza.toppings.push($(this).val());
+  });
+}
+
+function toppingPrice(newPizza) {
+  newPizza.toppings.forEach(function() {
+    newPizza.pizzaPrice += 0.50;
+  })
+};
+
 $(document).ready(function() {
   $("button#place-order").click(function() {
     $("#order-space").fadeIn();
@@ -32,21 +48,16 @@ $(document).ready(function() {
 
   $("form#new-pizza-order").submit(function(event) {
     event.preventDefault();
-
     let newPizza = new Pizza;
     newPizza.size = $("input:radio[name=size]:checked").val();
-    $("input:checkbox[name=pizza-topping]:checked").each(function() {
-      newPizza.toppings.push($(this).val());
-    });
     newPizza.calculateBasePizzaPrice();
-    newPizza.toppings.forEach(function() {
-      newPizza.pizzaPrice += 0.50;
-    })
+    addToppings(newPizza);
+    toppingPrice(newPizza);
+    newPizza.fullOrder();
+    console.log(newPizza.fullOrder());
     $("#price-display").fadeIn();
     $("span#order-total").text("$" + newPizza.pizzaPrice.toFixed(2));
   })
-
-
 
   $("button#reset-order").click(function() {
     location.reload();
