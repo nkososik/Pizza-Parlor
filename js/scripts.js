@@ -39,7 +39,6 @@ Pizza.prototype.calculatePizzaTotal = function() {
 }
 
 // User Interface Logic
-
 $(document).ready(function() {
   $("button#place-order").click(function() {
     $("#order-space").fadeIn();
@@ -47,9 +46,16 @@ $(document).ready(function() {
   $("form#new-pizza-order").submit(function(event) {
     event.preventDefault();
     let newPizza = new Pizza;
+
     newPizza.size = $("input:radio[name=size]:checked").val();
-      console.log(newPizza.size);
+    $("input:checkbox[name=pizza-topping]:checked").each(function() {
+      newPizza.toppings.push($(this).val());
+    });
+    console.log(newPizza.toppings);
+    console.log(newPizza.size);
   })
+
+
 
   $("button#reset-order").click(function() {
     location.reload();
