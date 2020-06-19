@@ -13,5 +13,8 @@ Pizza.prototype.toppingsAdded = function(element) {
   this.toppings.push(element);
 }
 
-
+Pizza.prototype.calculateOrderTotal = function() {
+  let orderPrice = 0;
+  
+}
 // User Interface Logic

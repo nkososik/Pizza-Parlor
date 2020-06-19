@@ -14,7 +14,7 @@
     <div class="jumbotron">
       <h2>Welcome to Pizzaria a la Shredder!</h2>
       <p>We are happy to serve you, unless you are a mutant turtle trained in the arts of <em>ninjutsu.</em></p>
-      <button id="place-order" class="btn-success btn">Place an Order</button>
+      <button id="place-order" class="btn-success btn">Open Order Menu</button>
       <button id="reset-order" class="btn-danger btn">Reset Your Order</button>
     </div>
 
@@ -41,6 +41,7 @@
             <label><input type="checkbox" id="feta" name="pizza-topping" value="feta"> Feta Cheese</label>
             <label><input type="checkbox" id="cheese" name="pizza-topping" value="cheese"> Extra Cheese</label>
           </div>
+
           <div class="form-group">
             <h5><strong>Please Select Your Pizza's Size:</strong></h5>
             <div class="radio">
@@ -52,10 +53,11 @@
             <div class="radio">
               <label><input type="radio" name="size" value="large"> <strong>Large (16")</strong>: $16.00</label>
             </div>
-            </div>
           </div>
+          <button type="submit" class="btn-primary">Place Your Order</button>
         </form>
       </div>
+    </div>
 
       <div id="price-display" class="col-md-4">
         <h4>Your Order Total Comes To: <span id="order-total"></span></h4>
