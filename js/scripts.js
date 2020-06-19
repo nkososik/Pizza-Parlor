@@ -1,6 +1,7 @@
 // Business Logic
 function Order() {
   this.orders = [];
+  this.orderId = 0;
 }
 
 // Pizza Constructor and Prototypes
