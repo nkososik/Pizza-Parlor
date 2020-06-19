@@ -5,9 +5,11 @@
 #order-selection {
   background-color: aquamarine;
   padding: 25px;
+  border-style: ridge;
 }
 
 #price-display {
   background-color: burlywood;
   padding: 25px;
+  border-style: ridge;
 }

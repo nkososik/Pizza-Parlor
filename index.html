@@ -20,10 +20,26 @@
 
     <div id="order-space">
       <div id="order-selection" class="col-md-8">
-
+        <form id="new-pizza-order">
+          <div class="form-group">
+            <h4><strong>Please Select Your Toppings</strong> (disclaimer, they all come shredded):</h4>
+            <h5>Each topping will add $0.50 to your total.</h5>
+            <label><input type="checkbox" id="pepperoni" name="pizza-topping" value="pepperoni"> Pepperoni</label>
+            <label><input type="checkbox" id="sausage" name="pizza-topping" value="sausage"> Sausage</label>
+            <label><input type="checkbox" id="bacon" name="pizza-topping" value="bacon"> Bacon</label>
+            <label><input type="checkbox" id="ham" name="pizza-topping" value="ham"> Ham</label>
+            <label><input type="checkbox" id="chicken" name="pizza-topping" value="chicken"> Chicken</label>
+            <label><input type="checkbox" id="mushrooms" name="pizza-topping" value="mushrooms"> Mushrooms</label>
+            <label><input type="checkbox" id="spinach" name="pizza-topping" value="spinach"> Spinach</label>
+            <label><input type="checkbox" id="onion" name="pizza-topping" value="onion"> Onion</label>
+            <label><input type="checkbox" id="tomato" name="pizza-topping" value="tomato"> Tomato</label>
+            <label><input type="checkbox" id="bell-pepper" name="pizza-topping" value="bell-pepper"> Bell Pepper</label>
+          </div>
+        </form>
       </div>
-      <div id="price-display" class="col-md-4">
 
+      <div id="price-display" class="col-md-4">
+        <h4>Your Order Total comes to: <span id="order-total"></span></h4>
       </div>
     </div>
   </div>
