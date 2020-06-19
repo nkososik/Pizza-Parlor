@@ -1,13 +1,9 @@
 // Business Logic
-// function Order() {
-//   this.orders = [];
-//   this.orderId = 0;
-// }
-
 // Pizza Constructor and Prototypes
 function Pizza(size) {
   this.toppings = [];
   this.size = size;
+  this.pizzaPrice = 0;
 }
 
 Pizza.prototype.calculateBasePizzaPrice = function() {
@@ -25,33 +21,35 @@ Pizza.prototype.calculateBasePizzaPrice = function() {
     case("small"):
       this.pizzaPrice += 10.00;
       break;
-  };
+  }
 }
 
-
-//   this.toppings.forEach(function(element) {
-//     this.pizzaPrice += 0.50;
-//   })
-//   return this.pizzaPrice.toFixed(2); // completes pizzaPrice calculation
-// }
+Pizza.prototype.calculateToppingPrice = function() {
+  this.pizzaPrice = 0.00;
+  this.toppings.forEach(function() {
+    this.pizzaPrice += 0.50;
+  })
+}
 
 // User Interface Logic
 $(document).ready(function() {
   $("button#place-order").click(function() {
     $("#order-space").fadeIn();
     });
+
   $("form#new-pizza-order").submit(function(event) {
     event.preventDefault();
     let newPizza = new Pizza;
-
     newPizza.size = $("input:radio[name=size]:checked").val();
     $("input:checkbox[name=pizza-topping]:checked").each(function() {
       newPizza.toppings.push($(this).val());
     });
-    console.log(newPizza.toppings);
-    console.log(newPizza.size);
     newPizza.calculateBasePizzaPrice();
-    console.log(newPizza.pizzaPrice);
+    console.log(newPizza.pizzaPrice.toFixed(2));
+    newPizza.toppings.forEach(function() {
+      newPizza.pizzaPrice += 0.50;
+    })
+    console.log(newPizza.pizzaPrice.toFixed(2));
   })
 
 
