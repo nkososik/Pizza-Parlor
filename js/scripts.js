@@ -39,17 +39,18 @@ $(document).ready(function() {
 
   $("form#new-pizza-order").submit(function(event) {
     event.preventDefault();
+
     let newPizza = new Pizza;
     newPizza.size = $("input:radio[name=size]:checked").val();
     $("input:checkbox[name=pizza-topping]:checked").each(function() {
       newPizza.toppings.push($(this).val());
     });
     newPizza.calculateBasePizzaPrice();
-    console.log(newPizza.pizzaPrice.toFixed(2));
     newPizza.toppings.forEach(function() {
       newPizza.pizzaPrice += 0.50;
     })
-    console.log(newPizza.pizzaPrice.toFixed(2));
+    $("#price-display").fadeIn();
+    $("span#order-total").text("$" + newPizza.pizzaPrice.toFixed(2));
   })
 
 
