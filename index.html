@@ -21,6 +21,23 @@
     <div id="order-space">
       <div id="order-selection" class="col-md-8">
         <form id="new-pizza-order">
+
+          <div class="form-group">
+            <h5><strong>Please Select Your Pizza's Size:</strong></h5>
+            <div class="radio">
+              <label><input type="radio" name="size" value="small" checked> <strong>Small (12")</strong>: $10.00</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="size" value="medium"> <strong>Medium (14")</strong>: $13.00</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="size" value="large"> <strong>Large (16")</strong>: $16.00</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="size" value="extra"> <strong>Extra-Large (18")</strong>: $18.00</label>
+            </div>
+          </div>
+
           <div class="form-group">
             <h5><strong>Please Select Your Toppings</strong> (disclaimer, they all come shredded):</h5>
             <h5>Each topping will add $0.50 to your total.</h5>
@@ -42,29 +59,12 @@
             <label><input type="checkbox" id="cheese" name="pizza-topping" value="cheese"> Extra Cheese</label>
           </div>
 
-          <div class="form-group">
-            <h5><strong>Please Select Your Pizza's Size:</strong></h5>
-            <div class="radio">
-              <label><input type="radio" name="size" value="small" checked> <strong>Small (12")</strong>: $10.00</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="size" value="medium"> <strong>Medium (14")</strong>: $13.00</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="size" value="large"> <strong>Large (16")</strong>: $16.00</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="size" value="extra"> <strong>Extra-Large (18")</strong>: $18.00</label>
-            </div>
-          </div>
           <button type="submit" class="btn-primary">Place Your Order</button>
         </form>
       </div>
     </div>
-
-      <div id="price-display" class="col-md-4">
-        <h4>Your Order Total Comes To: <span id="order-total"></span></h4>
-      </div>
+    <div id="price-display" class="col-md-4">
+      <h4>Your Order Total Comes To: <span id="order-total"></span></h4>
     </div>
   </div>
 </body>
