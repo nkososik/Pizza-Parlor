@@ -24,13 +24,6 @@ Pizza.prototype.calculateBasePizzaPrice = function() {
   }
 }
 
-Pizza.prototype.calculateToppingPrice = function() {
-  this.pizzaPrice = 0.00;
-  this.toppings.forEach(function() {
-    this.pizzaPrice += 0.50;
-  })
-}
-
 // User Interface Logic
 $(document).ready(function() {
   $("button#place-order").click(function() {
