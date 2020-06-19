@@ -14,7 +14,19 @@ Pizza.prototype.toppingsAdded = function(element) {
 }
 
 Pizza.prototype.calculateOrderTotal = function() {
-  let orderPrice = 0;
-  
+  let orderPrice = 0.00;
+  //set size variable in UI
+  switch(this.size) {
+    case("small"):
+      return orderPrice += 10.00;
+      break;
+    case("medium"):
+      return orderPrice += 13.00;
+      break ;
+    case("large"):
+      return orderPrice += 16.00;
+      break;
+  }
 }
+
 // User Interface Logic
