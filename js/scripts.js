@@ -18,6 +18,9 @@ Pizza.prototype.calculateOrderTotal = function() {
   let pizzaPrice = 0.00;
   //set size variable in UI to radiobox values, should transfer
   switch(this.size) {
+    case("extra"):
+      return pizzaPrice += 18.00;
+      break;
     case("large"):
       return pizzaPrice += 16.00;
       break;
@@ -32,7 +35,7 @@ Pizza.prototype.calculateOrderTotal = function() {
   this.toppings.forEach(function(element) {
     pizzaPrice += 0.50;
   })
-  return pizzaPrice;
+  return pizzaPrice; // completes pizzaPrice calculation
 }
 
 // User Interface Logic
