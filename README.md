@@ -6,7 +6,7 @@
 
 ## Description
 
-_This project focuses on the use of BDD, utilizing HTML, CSS, and JS to create a webpage that will take a user input and run it through a series of behaviors that simulate ordering a pizza. User can select pizza size and toppings and the webpage will push out a final cost._
+_This project focuses on the use of BDD, utilizing HTML, CSS, and JS to create a webpage that will take a user input and run it through a series of behaviors that simulate ordering a pizza. User can select pizza size and toppings and the webpage will push out a final cost and final order._
 
 ## Specifications
 
