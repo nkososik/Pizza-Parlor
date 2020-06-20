@@ -12,11 +12,12 @@ _This project focuses on the use of BDD, utilizing HTML, CSS, and JS to create a
 
 | Spec | Input | Output |
 | :------------- | :------------- | :------------- |
-| **Program Gathers User Input** | User input: "9" | Form Output: "9" |
-| **Program Creates an Order**| User Input: NA | Output: Order Object {orders: [], orderId: 0} |
-| **Program Accepts Multiple Toppings and One Size Input** | User input: "selection of toppings, size"  | Output: NA |
-| **Program Creates a Pizza**| User Input: NA | Output: Pizza Object {toppings: [], size:" "} |
-| **Based on Topping and Size Selection, Program Outputs a Final Price**| Input: "[Pepperoni, Mushrooms] + "small" | Output: "$11.00" |
+| **Program Gathers User Input** | User input: "clicks size and toppings" | Form Output: "size: Large, toppings = [pepperoni, basil]" |
+| **Program Creates a Pizza Object**| User Input: NA | Output: Pizza Object {toppings: [], size:" ", pizzaPrize: 0} |
+| **Program Adds Size to Pizza Object**| Input: "Large" | Output: this.size = "Large" |
+| **Program Adds Toppings to Pizza Object through an Array**| Input: "Pepperoni, Mushrooms | Output: [pepperoni, mushrooms] |
+| **Program Outputs Order Price based on Size and Topping Selections** | User input: "large with pepperoni"  | Output: "$16.50" |
+| **Based on Topping and Size Selection, Program Outputs a Final Order Text**| Input: "[Pepperoni, Mushrooms] + "small" | Output: "small pizza with pepperoni, mushrooms" |
 
 
 
