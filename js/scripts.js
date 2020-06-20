@@ -9,16 +9,16 @@ function Pizza(size) {
 Pizza.prototype.calculateBasePizzaPrice = function() {
   this.pizzaPrice = 0.00;
   switch(this.size) {
-    case("extra"):
+    case("Extra-Large"):
       this.pizzaPrice += 18.00;
       break;
-    case("large"):
+    case("Large"):
       this.pizzaPrice += 16.00;
       break;
-    case("medium"):
+    case("Medium"):
       this.pizzaPrice += 13.00;
       break;
-    case("small"):
+    case("Small"):
       this.pizzaPrice += 10.00;
       break;
   }
@@ -54,9 +54,9 @@ $(document).ready(function() {
     addToppings(newPizza);
     toppingPrice(newPizza);
     newPizza.fullOrder();
-    console.log(newPizza.fullOrder());
     $("#price-display").fadeIn();
     $("span#order-total").text("$" + newPizza.pizzaPrice.toFixed(2));
+    $("span#full-order").text(newPizza.fullOrder());
   })
 
   $("button#reset-order").click(function() {
